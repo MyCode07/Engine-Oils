@@ -1,0 +1,293 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 4;
+    @include adaptive-value("padding-top", 25, 10, 1);
+    @include adaptive-value("padding-bottom", 25, 10, 1);
+
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__body
+
+    &__body {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        div {
+            svg {
+                stroke: #fff;
+                @include adaptive-value("height", 18, 16, 1);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            justify-content: space-between;
+        }
+    }
+
+    // .header__burger
+
+    &__burger {
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include adaptive-value("width", 40, 30, 1);
+
+        img,
+        svg {
+            transition: all 0.3s ease 0s;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+
+        &._active {
+            img,
+            svg {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        @include adaptive-value("width", 130, 80, 1);
+
+        display: block;
+        @include adaptive-value("margin-right", 200, -50, 1);
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    // .header__content-buttons
+
+    &__content {
+        &-buttons {
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 1025px) {
+                flex: 1 1 auto;
+            }
+
+            & > :first-child {
+                @media (min-width: 1025px) {
+                    @include adaptive-value("margin-right", 75, 20, 1);
+                }
+
+                @media (max-width: 1024px) {
+                    @include adaptive-value("margin-right", 30, 15, 1);
+                }
+
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
+
+                svg {
+                    transition: all 0.3s ease 0s;
+                    fill: #fff;
+                }
+
+                div {
+                    transition: all 0.3s ease 0s;
+                    margin-right: 10px;
+
+                    @media (min-width: 1025px) {
+                        @include adaptive-value("width", 54, 40, 1);
+                        @include adaptive-value("height", 54, 40, 1);
+                    }
+
+                    @media (max-width: 1024px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        svg {
+                            transform: scale(1.3);
+                        }
+                        div {
+                            border: 1px solid rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+
+                @media (max-width: 1024px) {
+                    div {
+                        margin-right: 0;
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                    color: #fff;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    justify-content: center;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    // .header__action-buttons
+
+    &__action {
+        &-buttons {
+            display: flex;
+            align-items: center;
+
+            & > :first-child {
+                @include adaptive-value("margin-right", 50, 0, 1);
+            }
+
+            a {
+                transition: all 0.3s ease 0s;
+                color: #fff;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border: 1px solid rgba(255, 255, 255, 1);
+                    }
+                }
+            }
+
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.search {
+    max-width: 200px;
+    width: 100%;
+    position: relative;
+    transition: all 0.3s ease 0s;
+
+    div {
+        svg {
+            fill: transparent;
+        }
+    }
+
+    input {
+        max-width: 120px;
+        position: absolute;
+        left: 44px;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 2;
+
+        @media (max-width: 1024px) {
+            transition: all 0.3s ease 0s;
+
+            top: 100%;
+            left: -160px;
+            transform: translate(0);
+            border: 1px solid #fff;
+            background-color: #000;
+            border-radius: 100px;
+            padding: 10px 20px;
+            border-top-right-radius: 0;
+            max-width: unset;
+
+            width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+        }
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        div {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    @media (min-width: 1025px) {
+        &:after {
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            transform: translate(-17.5px, -50%);
+            @include adaptive-value("width", 54, 35, 1);
+            @include adaptive-value("height", 54, 35, 1);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:after {
+                border-radius: 4px;
+                width: 100%;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    &._active {
+        div {
+            border: 1px solid rgba(255, 255, 255, 1);
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom: unset;
+            background-color: #000;
+            position: relative;
+            top: 1px;
+            z-index: 3;
+        }
+
+        input {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}
