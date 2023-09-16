@@ -1,4 +1,5 @@
 .header {
+    transition: all 0.3s ease 0s;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,12 +41,23 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        @include adaptive-value("width", 40, 30, 1);
+        @include adaptive-value("width", 50, 30, 1);
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    transform: scale(1.2);
+                }
+            }
+        }
 
         img,
         svg {
             transition: all 0.3s ease 0s;
             pointer-events: none;
+            stroke: #fff;
+            stroke-width: 2px;
         }
 
         @media (max-width: 768px) {
@@ -63,7 +75,7 @@
     // .header__logo
 
     &__logo {
-        @include adaptive-value("width", 130, 80, 1);
+        @include adaptive-value("width", 130, 85, 1);
 
         display: block;
         @include adaptive-value("margin-right", 200, -50, 1);
@@ -188,6 +200,87 @@
             }
         }
     }
+
+    &._sticky {
+        background-color: #fff;
+
+        * {
+            color: #0a1b36;
+        }
+
+        .header__logo {
+            svg {
+                fill: #0a1b36;
+            }
+        }
+
+        .header__burger {
+            svg {
+                stroke: #0a1b36;
+                fill: #0a1b36;
+            }
+        }
+
+        .search {
+            @media (any-hover: hover) {
+                &:hover {
+                    &:after {
+                        border: 1px solid #0a1b36;
+                    }
+                }
+            }
+
+            &:after {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            svg {
+                stroke: #0a1b36;
+            }
+            input {
+                &::placeholder {
+                    color: #0a1b36;
+                }
+            }
+
+            @media (max-width: 1024px) {
+                div {
+                    border: 1px solid rgba(000, 000, 000, 0.1);
+                }
+            }
+        }
+
+        .header__content-buttons {
+            & > :first-child {
+                @media (any-hover: hover) {
+                    &:hover {
+                        div {
+                            border: 1px solid #0a1b36;
+                        }
+                    }
+                }
+
+                div {
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+
+                    svg {
+                        fill: #0a1b36;
+                    }
+                }
+            }
+        }
+
+        .header__action-buttons {
+            a {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border: 1px solid #0a1b36;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .search {
@@ -213,17 +306,16 @@
         @media (max-width: 1024px) {
             transition: all 0.3s ease 0s;
 
-            top: 100%;
-            left: -160px;
+            top: 120%;
+            left: -560px;
             transform: translate(0);
             border: 1px solid #fff;
             background-color: #000;
             border-radius: 100px;
             padding: 10px 20px;
-            border-top-right-radius: 0;
             max-width: unset;
 
-            width: 200px;
+            width: 600px;
             opacity: 0;
             visibility: hidden;
             z-index: -1;
@@ -263,7 +355,7 @@
             &:after {
                 border-radius: 4px;
                 width: 100%;
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                border: 1px solid #fff;
             }
         }
     }
@@ -271,19 +363,25 @@
     &._active {
         div {
             border: 1px solid rgba(255, 255, 255, 1);
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            border-bottom: unset;
-            background-color: #000;
             position: relative;
-            top: 1px;
             z-index: 3;
+            background-color: #fff;
+
+            svg {
+                stroke: #0a1b36;
+            }
         }
 
         input {
             opacity: 1;
             visibility: visible;
             z-index: 2;
+            background-color: #fff;
+            border: 1px solid rgba(000, 000, 000, 0.1);
+
+            &::placeholder {
+                color: #0a1b36;
+            }
         }
     }
 

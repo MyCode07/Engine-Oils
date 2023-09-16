@@ -10,16 +10,17 @@
     <!-- @@include('./html/ticker.html') -->
     <!-- @@include('./html/replace.html') -->
 
-    <section class="hero">
+    <section class="hero" data-replace-width="992">
         <img id="bgi" src="img/hero-bgi.png" alt="">
         <div class="hero__container _container">
-            <div class="hero__body">
-                <h1>Оптовые поставки автомасел <br> из Объединенных Арабских Эмиратов</h1>
-                <div class="offer">
+            <div class="hero__body" data-replace-old-position="afterend">
+                <h1>Оптовые поставки автомасел <br> из Объединенных Арабских
+                    Эмиратов</h1>
+                <div class="offer" data-replace-element>
                     <div class="offer__info">
                         <div class="offer__info-title">
                             <label>-50%</label>
-                            <h4>Купите моторные масла HAVENS ROBUSTA со скидкой 50%</h4>
+                            <a href>Купите моторные масла HAVENS ROBUSTA со скидкой 50%</a>
                         </div>
                         <div class="timer">
                             <div class="timer__items">
@@ -56,8 +57,9 @@
                 </div>
             </div>
         </div>
+        <div class="new-offer" data-replace-new-position="afterend"></div>
     </section>
-
+ 
 </main>
 
 @@include('./html/question.html')

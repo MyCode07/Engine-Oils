@@ -1,10 +1,7 @@
 .menu {
     background-color: #fff;
     color: #0a1b36;
-    height: calc(100% - 100px);
-
-    @media (max-width: 768px) {
-    }
+    height: calc(100% - 90px);
 
     // .menu__container
 
@@ -36,6 +33,7 @@
         // .menu__top-body
 
         &-body {
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,14 +44,18 @@
                 position: absolute;
                 content: "";
                 left: 0px;
-                top: 0;
-                width: 100%;
-                height: 100%;
+                top: -50px;
+                width: 110%;
+                height: 110%;
                 z-index: -1;
                 background-image: url("@img/background-img.png");
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+            }
+
+            @media (max-width: 1024px) {
+                overflow-y: auto;
             }
         }
 
@@ -149,17 +151,26 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
 
         @include adaptive-value("padding-top", 50, 25, 1);
         @include adaptive-value("padding-bottom", 50, 25, 1);
         @include adaptive-value("padding-left", 50, 15, 1);
         @include adaptive-value("padding-right", 50, 15, 1);
-
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
-
-        color: #0a1b36;
         @include adaptive-value("font-size", 16, 14, 1);
+        color: #0a1b36;
         font-weight: 400;
+
+        & > :not(:last-child) {
+            @include adaptive-value("margin-bottom", 50, 30, 1);
+        }
+
+        @media (max-width: 1024px) {
+            overflow-y: auto;
+        }
 
         @media (max-width: 768px) {
             flex-direction: row;
@@ -191,6 +202,10 @@
             border-radius: 4px;
             padding: 10px 20px;
             border: 1px solid rgba(0, 0, 0, 0.1);
+
+            @media (min-width: 769px) {
+                display: none;
+            }
 
             @media (max-width: 768px) {
                 width: 100%;

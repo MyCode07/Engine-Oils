@@ -2,13 +2,16 @@
 
 const body = document.body;
 const menu = document.querySelector('.menu');
+const header = document.querySelector('header');
 const burger = document.querySelector('.header__burger');
 
 if (burger) {
     burger.addEventListener('click', (е) => {
         menu.classList.toggle('_open');
         burger.classList.toggle('_active');
+        header.classList.toggle('_sticky');
         document.body.classList.toggle('_noscroll');
+
     })
 }
 
