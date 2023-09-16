@@ -47,4 +47,16 @@
 @import "common/question";
 
 // load hero
-@import "common/hero";
+@import "parts/hero"; 
+
+// load about
+@import "parts/about";
+
+// load catalog
+@import "parts/catalog";
+
+// load partners
+@import "parts/partners";
+
+// load products
+@import "parts/products";

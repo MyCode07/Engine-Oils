@@ -87,7 +87,13 @@ h1 {
 
 h2 {
     @include adaptive-value("font-size", 32, 22, 1);
+    @include adaptive-value("margin-bottom", 50, 25, 1);
+
     font-weight: 400;
+
+    @media (max-width: 768px) {
+        font-weight: 700;
+    }
 }
 
 h3 {
@@ -96,12 +102,17 @@ h3 {
     letter-spacing: -0.144px;
 }
 
+h4 {
+    @include adaptive-value("font-size", 42, 24, 1);
+    font-weight: 500;
+}
 
 ._button {
     display: flex;
     justify-content: center;
     align-items: center;
     @include adaptive-value("height", 50, 40, 1);
+    width: fit-content;
 
     padding: 14px 28px;
 
@@ -116,6 +127,69 @@ h3 {
         padding: 14px 24px;
         font-weight: 400;
         border-radius: 4px;
+    }
+}
+._button-dark {
+    background-color: #0a1b36;
+    color: #fff;
+    border: unset;
+}
+
+._button-white {
+    background-color: #fff;
+    color: #0a1b36;
+    border: unset;
+}
+
+._card-hover-btn {
+    transition: all 0.3s ease 0s;
+
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    background-color: #0a1b36;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    @media (max-width: 992px) {
+        border-radius: 4px;
+    }
+
+    svg,
+    img {
+        transition: all 0.3s ease 0s;
+        pointer-events: none;
+        stroke: #fff;
+
+        height: 14px;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            svg {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+._main-text {
+    @include adaptive-value("font-size", 48, 22, 1);
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+        font-weight: 700;
     }
 }
 
