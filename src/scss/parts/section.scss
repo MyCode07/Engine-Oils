@@ -8,16 +8,18 @@
 
     &__body {
     }
-}
 
-.about_section {
-    // .about_section-top
-
-    &-top {
+    ._section-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptive-value("margin-bottom", 50, 25, 1);
     }
 }
+
 .about {
     // .about__info
+
     &__info {
         display: flex;
         flex-direction: column;
@@ -98,95 +100,108 @@
         }
     }
 
-    // .about__bottom
+    // .about__scroll
 
-    &__bottom {
-        @include adaptive-value("margin-top", 80, 40, 1);
-        display: flex;
-
+    &__scroll {
         @media (max-width: 768px) {
-            overflow-x: scroll;
-            padding-bottom: 20px;
+            width: 100vw;
+            margin-left: -15px;
+            padding-inline: 15px;
+            overflow-x: auto;
 
             &::-webkit-scrollbar {
                 height: 3px;
                 background-color: #0a1b36;
                 border-radius: 4px;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                background-color: #eaaf00;
-                border-radius: 4px;
+                display: none;
             }
         }
     }
 
-    // .about__grid
-    &__grid {
-        width: 100%;
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+    // .about__flex
+
+    &__flex {
+        @include adaptive-value("margin-top", 80, 40, 1);
+        display: flex;
+
+        @media (max-width: 768px) {
+            padding-bottom: 20px;
+            width: fit-content;
+        }
+
+        .main__blok {
+            @media (max-width: 768px) {
+                min-width: 345px;
+            }
+
+            @media (max-width: 475px) {
+                max-width: 300px;
+                min-width: 300px;
+            }
+        }
+    }
+
+    // .about-item
+
+    &-item {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 8px;
+
+        @media (max-width: 992px) {
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        span {
+            white-space: nowrap;
+            display: block;
+            @include adaptive-value("margin-bottom", 50, 44, 1);
+
+            @include adaptive-value("font-size", 64, 40, 1);
+            font-weight: 500;
+
+            &:before {
+                content: "<";
+            }
+        }
+    }
+
+    .grid {
+        flex: 1 1 auto;
 
         & > :last-child {
             grid-column: span 2;
-        }
 
-        @media (max-width: 1024px) {
-            grid-template-columns: repeat(3, 345px);
-
-            & > :last-child {
-                grid-column: span 1;
-            }
-        }
-
-        @media (min-width: 769px) {
-            overflow-x: scroll;
-
-            &::-webkit-scrollbar {
-                height: 4px;
-                background-color: #0a1b36;
-                border-radius: 4px;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                height: 2px;
-                background-color: #eaaf00;
-                border-radius: 4px;
+            @media (max-width: 768px) {
+                grid-column: unset;
+                grid-row: span 2;
+                order: 2;
             }
         }
 
         @media (max-width: 768px) {
-            grid-template-columns: repeat(2, 280px);
+            & > :first-child {
+                order: 1;
+            }
 
-            & > :last-child {
-                grid-column: span 2;
+            & > :nth-child(2) {
+                order: 3;
             }
         }
 
-        // .about__grid-item
-
         &-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 50px;
-            background-color: #fff;
-            border-radius: 8px;
-
-            @media (max-width: 992px) {
-                padding: 20px;
-                border-radius: 4px;
+            @media (max-width: 768px) {
+                min-width: 345px;
             }
 
-            span {
-                white-space: nowrap;
-                display: block;
-                @include adaptive-value("margin-bottom", 50, 44, 1);
-
-                @include adaptive-value("font-size", 64, 40, 1);
-                font-weight: 500;
+            @media (max-width: 475px) {
+                max-width: 300px;
+                min-width: 300px;
             }
         }
     }
@@ -260,6 +275,63 @@
             background-position: bottom right;
             mix-blend-mode: overlay;
             z-index: 0;
+        }
+    }
+}
+
+#partners {
+    ._ticker {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        z-index: -1;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .ticker-text {
+                    animation-play-state: paused;
+                }
+            }
+        }
+
+        ._ticker-text {
+            display: grid;
+            grid-template-columns: repeat(12, 345px);
+            grid-template-rows: 345px;
+            gap: 20px;
+
+            @media (max-width: 992px) {
+                grid-template-columns: repeat(12, 250px);
+                grid-template-rows: 250px;
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(12, 150px);
+                grid-template-rows: 150px;
+            }
+
+            a {
+                border-radius: 8px;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width: 99px) {
+                    border-radius: 4px;
+                }
+
+                img {
+                    width: 80%;
+                    object-fit: cover;
+                    pointer-events: none;
+
+                    @media (max-width: 768px) {
+                        width: 70%;
+                    }
+                }
+            }
         }
     }
 }

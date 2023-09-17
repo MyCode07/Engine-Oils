@@ -5,18 +5,15 @@
 @@include('./html/header.html')
 
 <main>
-    <!-- <input type="text" class="phone" placeholder="phone"> -->
-    <!-- @@include('./html/accorderon.html') -->
-    <!-- @@include('./html/ticker.html') -->
-    <!-- @@include('./html/replace.html') -->
-
-    <section class="hero" data-replace-width="992">
-        <img id="bgi" src="img/hero-bgi.png" alt="">
+    <section class="hero">
         <div class="hero__container _container">
-            <div class="hero__body" data-replace-old-position="afterend">
-                <h1>Оптовые поставки автомасел <br> из Объединенных Арабских
-                    Эмиратов</h1>
-                <div class="offer" data-replace-element>
+            <div class="hero__body">
+                <div class="hero__top">
+                    <img src="img/hero-bgi.png" alt="">
+                    <h1>Оптовые поставки автомасел <br> из Объединенных Арабских
+                        Эмиратов</h1>
+                </div>
+                <div class="offer">
                     <div class="offer__info">
                         <div class="offer__info-title">
                             <label>-50%</label>
@@ -51,22 +48,18 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="_button">Связатся с нами</a>
+                        <a href="" class="_button _button-dark">Связатся с нами</a>
                     </div>
                     <img src="img/spec-offer.png" alt="">
                 </div>
             </div>
         </div>
-
-        <div class="new-offer" data-replace-new-position="afterend"></div>
-
     </section>
-
 
     <section class="section" id="about">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="about_section-top">
+                <div class="_section-top">
                     <h2>О бренде</h2>
                 </div>
                 <div class="about">
@@ -78,32 +71,38 @@
                             более чем 15 странах.</p>
                         <a href="" class="_button _button-dark">Подробнее о бренде</a>
                     </div>
-                    <div class="about__bottom">
-                        <div class="main__blok">
-                            <div>
-                                <h4>Сотрудничество</h4>
-                                <p>Мы заинтересованы в установлении партнерских отношений с компаниями, которые
-                                    стремятся
-                                    найти качественные альтернативы
-                                    для замены ушедших брендов моторных масел.</p>
+
+                    <div class="about__scroll">
+                        <div class="about__flex">
+                            <div class="main__blok">
+                                <div>
+                                    <h4>Сотрудничество</h4>
+                                    <p>Мы заинтересованы в установлении партнерских отношений с компаниями, которые
+                                        стремятся
+                                        найти качественные альтернативы
+                                        для замены ушедших брендов моторных масел.</p>
+                                </div>
+                                <a href="" class="_button _button-white">Заполнить форму</a>
                             </div>
-                            <a href="" class="_button _button-white">Заполнить форму</a>
-                        </div>
-                        <div class="about__grid">
-                            <div class="about__grid-item">
-                                <span>
-                                    < 30</span>
+                            <div class="grid grid-2">
+                                <div class="grid-item">
+                                    <div class="about-item">
+                                        <span>30</span>
                                         <p>Более 30 городов</p>
-                            </div>
-                            <div class="about__grid-item">
-                                <span>
-                                    < 150</span>
+                                    </div>
+                                </div>
+                                <div class="grid-item">
+                                    <div class="about-item">
+                                        <span>150</span>
                                         <p>Более 150 точек продаж</p>
-                            </div>
-                            <div class="about__grid-item">
-                                <span>
-                                    < 100,000</span>
+                                    </div>
+                                </div>
+                                <div class="grid-item">
+                                    <div class="about-item">
+                                        <span>100,000</span>
                                         <p>Более 100.000 литров отгруженных смазочных материалов</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,93 +114,105 @@
     <section class="section" id="catalog">
         <div class="section__container _container">
             <div class="section__body">
-                <h2>Каталог</h2>
-                <div class="catalog__flex">
+                <div class="_section-top">
+                    <h2>Каталог</h2>
+                </div>
 
-                    <article>
-                        <a href="">
-                            <h3>Для легковой коммерческой техники</h3>
-                        </a>
-                        <div>
-                            <img src="img/catalog/catalog-1.png" alt="">
-                            <img src="img/catalog/catalog-4-hover.png" alt="">
-                        </div>
-                        <button class="_card-hover-btn">
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </article>
-
-                    <article>
-                        <a href="">
-                            <h3>Для тяжелогруженной техники</h3>
-                        </a>
-                        <div>
-                            <img src="img/catalog/catalog-2.png" alt="">
-                            <img src="img/catalog/catalog-4-hover.png" alt="">
-                        </div>
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </article>
-
-                    <article>
-                        <a href="">
-                            <h3>Трансмиссионные масла</h3>
-                        </a>
-                        <div>
-                            <img src="img/catalog/catalog-3.png" alt="">
-                            <img src="img/catalog/catalog-4-hover.png" alt="">
-                        </div>
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </article>
-
-                    <article>
-                        <a href="">
-                            <h3>Тормозная жидкость</h3>
-                        </a>
-                        <div>
-                            <img src="img/catalog/catalog-4.png" alt="">
-                            <img src="img/catalog/catalog-4-hover.png" alt="">
-                        </div>
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </article>
-
-                    <article>
-                        <a href="">
-                            <h3>Пластичные смазки</h3>
-                        </a>
-                        <div>
-                            <img src="img/catalog/catalog-5.png" alt="">
-                            <img src="img/catalog/catalog-4-hover.png" alt="">
-                        </div>
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </article>
-
+                <div class="grid grid-5">
+                    <div class="grid-item">
+                        <article>
+                            <a href="">
+                                <h3>Для легковой коммерческой техники</h3>
+                                <div>
+                                    <img src="img/catalog/catalog-1.png" alt="">
+                                    <img src="img/catalog/catalog-4-hover.png" alt="">
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article>
+                            <a href="">
+                                <h3>Для тяжелогруженной техники</h3>
+                                <div>
+                                    <img src="img/catalog/catalog-2.png" alt="">
+                                    <img src="img/catalog/catalog-4-hover.png" alt="">
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article>
+                            <a href="">
+                                <h3>Трансмиссионные масла</h3>
+                                <div>
+                                    <img src="img/catalog/catalog-3.png" alt="">
+                                    <img src="img/catalog/catalog-4-hover.png" alt="">
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article>
+                            <a href="">
+                                <h3>Тормозная жидкость</h3>
+                                <div>
+                                    <img src="img/catalog/catalog-4.png" alt="">
+                                    <img src="img/catalog/catalog-4-hover.png" alt="">
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article>
+                            <a href="">
+                                <h3>Пластичные смазки</h3>
+                                <div>
+                                    <img src="img/catalog/catalog-5.png" alt="">
+                                    <img src="img/catalog/catalog-4-hover.png" alt="">
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="section" id="partners">
-        <div class="section__container _container">
+        <div class="section__container">
             <div class="section__body">
-                <h2>Наши партнеры</h2>
+                <div class="_container">
+                    <div class="_section-top">
+                        <h2>Наши партнеры</h2>
+                    </div>
+                </div>
+
                 <div class="_ticker partners__body">
                     <div class="_ticker-text">
                         <a href="">
@@ -288,182 +299,179 @@
     <section class="section" id="products">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="section__top">
+                <div class="_section-top">
                     <h2>Каталог</h2>
                     <a href="" class="_button _button-dark">Вся продукция</a>
                 </div>
-                <div class="products__grid">
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href="">
-
-                        <div class="products__top">
-                            <h3>Havens robusta</h3>
-                            <span> от 10,000 р</span>
-                        </div>
-
-                        <div class="products__images">
-                            <img src="img/products/product-1.png" alt="">
-                            <img src="img/products/product-1-hover.png" alt="">
-                        </div>
-
-                        <div class="products__info">
-                            <label class="_small-text">Объем (л)</label>
-                            <ol>
-                                <li>216</li>
-                                <li>20</li>
-                                <li>4</li>
-                            </ol>
-                        </div>
-
-                        <button>
-                            <svg viewBox="0 0 12 12">
-                                <use xlink:href="img/svg/icons.svg#link"></use>
-                            </svg>
-                        </button>
-                    </a>
+                <div class="grid grid-4">
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="grid-item">
+                        <article class="product">
+                            <a href="">
+                                <div class="product-top">
+                                    <h3>Havens robusta</h3>
+                                    <span> от 10,000 р</span>
+                                </div>
+                                <div class="product-images">
+                                    <img src="img/products/product-1.png" alt="">
+                                    <img src="img/products/product-1-hover.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <label class="_small-text">Объем (л)</label>
+                                    <ol>
+                                        <li>216</li>
+                                        <li>20</li>
+                                        <li>4</li>
+                                    </ol>
+                                </div>
+                                <span class="_card-hover-btn">
+                                    <svg viewBox="0 0 12 12">
+                                        <use xlink:href="img/svg/icons.svg#link"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
 </main>
 
-@@include('./html/question.html')
 @@include('./html/footer.html')
-
 @@include('./html/scripts.html')

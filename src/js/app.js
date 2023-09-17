@@ -16,4 +16,3 @@ replaceDomElements();
 runTicker()
 // accorden();
 // maskInputs('+7 999 999 999 999', '.phone')
-

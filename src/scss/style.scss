@@ -47,16 +47,14 @@
 @import "common/question";
 
 // load hero
-@import "parts/hero"; 
+@import "parts/hero";
 
-// load about
-@import "parts/about";
+// load section
+@import "parts/section";
 
-// load catalog
-@import "parts/catalog";
+// load grid
+@import "parts/grid";
 
-// load partners
-@import "parts/partners";
-
-// load products
-@import "parts/products";
+// load card
+@import "parts/card";
+ 

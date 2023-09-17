@@ -1,34 +1,38 @@
-// import { isMobile } from './isMobile.js'
+import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 
-const body = document.body;
+
+
 const menu = document.querySelector('.menu');
 const header = document.querySelector('header');
 const burger = document.querySelector('.header__burger');
+
+menu.style.maxHeight = `calc(100% - ${header.getBoundingClientRect().height}px)`;
 
 if (burger) {
     burger.addEventListener('click', (е) => {
         menu.classList.toggle('_open');
         burger.classList.toggle('_active');
-        header.classList.toggle('_sticky');
         document.body.classList.toggle('_noscroll');
 
+        if (!header.classList.contains('_scrolled')) {
+            header.classList.toggle('_sticky');
+        }
+
+        if (menu.classList.contains('_open')) {
+            lockPadding();
+            setMenuTopPosition();
+        }
+        else {
+            unLockPadding()
+            resetMenuTopPosition();
+        }
     })
 }
 
+function setMenuTopPosition() {
+    menu.style.top = header.getBoundingClientRect().height + 'px';
+}
 
-const searchBtn = document.querySelector('.search');
-
-if (searchBtn && window.innerWidth <= 1024 && window.innerWidth >= 769) {
-    searchBtn.addEventListener('click', (е) => {
-        searchBtn.classList.add('_active');
-    })
-
-
-    document.onclick = function (e) {
-        let target = e.target;
-
-        if (!target.classList.contains('_active')) {
-            searchBtn.classList.remove('_active');
-        }
-    };
-} 
+function resetMenuTopPosition() {
+    menu.style.top = 0;
+}

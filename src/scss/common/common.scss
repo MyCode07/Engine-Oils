@@ -66,28 +66,20 @@ section {
 
 h1 {
     color: #fff;
-    @include adaptive-value("font-size", 74, 37, 1);
     font-weight: 500;
-    letter-spacing: -1.48px;
+    letter-spacing: -0.02em;
 
     @media (min-width: 1025px) {
         @include adaptive-value("font-size", 74, 60, 1);
     }
 
     @media (max-width: 1024px) {
-        font-size: 60px;
-        letter-spacing: -1px;
-    }
-    @media (max-width: 768px) {
-        font-size: 36px;
-        font-weight: 700;
-        letter-spacing: 0;
+        @include adaptive-value("font-size", 74, 36, 1);
     }
 }
 
 h2 {
     @include adaptive-value("font-size", 32, 22, 1);
-    @include adaptive-value("margin-bottom", 50, 25, 1);
 
     font-weight: 400;
 
