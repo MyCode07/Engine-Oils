@@ -6,9 +6,9 @@ if (!isMobile.any()) {
 
     const cursorLinks = [...document.querySelectorAll('a')].concat([...document.querySelectorAll('button')].concat([...document.querySelectorAll('.tab__label')]));
 
-    const mouse = { x: -100, y: -100 }; 
-    const pos = { x: 0, y: 0 }; 
-    const speed = 0.5; 
+    const mouse = { x: -100, y: -100 };
+    const pos = { x: 0, y: 0 };
+    const speed = 0.5;
 
     const updateCoordinates = e => {
         mouse.x = e.clientX;
@@ -83,3 +83,10 @@ if (!isMobile.any()) {
         });
     });
 }
+
+
+
+
+
+
+

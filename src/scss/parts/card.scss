@@ -12,7 +12,7 @@
         }
 
         @media (max-width: 768px) {
-            padding-bottom: 140%;
+            padding-bottom: 0;
         }
 
         a {
@@ -30,6 +30,7 @@
 
             @media (max-width: 768px) {
                 padding: 15px;
+                position: relative;
             }
         }
 
@@ -52,8 +53,8 @@
             justify-content: flex-end;
 
             @media (max-width: 768px) {
-                height: 60%;
-                bottom: 0;
+                position: relative;
+                height: 100%;
                 top: unset;
             }
 
@@ -66,9 +67,8 @@
                 height: 85%;
 
                 @media (max-width: 768px) {
-                    height: auto;
-                    width: 120%;
-                    max-width: none;
+                    height: 100%;
+                    width: auto;
                 }
             }
 
@@ -79,7 +79,10 @@
                 top: 0;
                 left: 0;
                 opacity: 0;
-                transform: scale(0);
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
@@ -97,12 +100,10 @@
                 div {
                     & > :first-child {
                         opacity: 0;
-                        transform: scale(0);
                     }
 
                     & > :last-child {
                         opacity: 1;
-                        transform: scale(1);
                     }
                 }
             }
@@ -142,11 +143,16 @@
 
         @media (max-width: 768px) {
             position: relative;
+            padding: 10px;
         }
     }
 
     @media (any-hover: hover) {
         &:hover {
+            .product-top {
+                color: #fff;
+            }
+
             ._card-hover-btn {
                 opacity: 1;
                 visibility: visible;
@@ -155,13 +161,22 @@
             .product-images {
                 & > :first-child {
                     opacity: 0;
-                    transform: scale(0);
                 }
 
                 & > :last-child {
                     opacity: 1;
-                    transform: scale(1);
                 }
+            }
+
+            ol {
+                li {
+                    color: #fff;
+                    border: 1px solid #fff;
+                }
+            }
+            ._small-text {
+                opacity: 1;
+                color: #fff;
             }
         }
     }
@@ -176,10 +191,12 @@
         z-index: 1;
 
         span {
+            @include adaptive-value("font-size", 22, 16, 1);
+            letter-spacing: -0.144px;
             white-space: nowrap;
             margin-left: 10px;
 
-            @media (max-width:768px){
+            @media (max-width: 768px) {
                 margin-left: 0;
                 margin-top: 5px;
             }
@@ -212,6 +229,7 @@
         }
 
         img {
+            pointer-events: none;
             transition: all 0.4s ease 0s;
         }
 
@@ -238,7 +256,6 @@
             object-fit: cover;
 
             opacity: 0;
-            transform: scale(0);
 
             @media (max-width: 768px) {
                 display: none;
@@ -288,6 +305,61 @@
                 height: 40px;
                 border-radius: 4px;
                 border: 1px solid rgba(0, 0, 0, 0.1);
+
+                @media (max-width: 768px) {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &._small-text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+#robusta {
+    .product {
+        &-images {
+            & > :last-child,
+            img {
+                position: relative;
+                object-fit: contain;
+                opacity: 1;
+                height: auto;
+                width: auto;
+
+                @media (max-width: 768px) {
+                    display: block;
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 70%;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                .product-top {
+                    color: #0a1b36;
+                }
+
+                img {
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+
+                ol {
+                    li {
+                        color: #0a1b36;
+                        border: 1px solid #0a1b36;
+                    }
+                }
+                ._small-text {
+                    opacity: 1;
+                    color: #0a1b36;
+                }
             }
         }
     }
