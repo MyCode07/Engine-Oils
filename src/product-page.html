@@ -1,0 +1,132 @@
+@@include('./html/head.html', {
+"title":"Product page",
+})
+
+@@include('./html/header.html')
+
+<main>
+    <section class="section" id="product-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="product__content">
+                    <div class="product__images">
+                        <img data-size="big" src="img/products/product-1.png" alt="">
+                        <img data-size="middle" src="img/products/product-1.png" alt="">
+                        <img data-size="small" src="img/products/product-1.png" alt="">
+                    </div>
+                    <div class="product__absolute">
+                        <ul class="product__size">
+                            <li data-size="big">
+                                <a href="">
+                                    <svg viewBox="0 0 42 65">
+                                        <use xlink:href="img/svg/icons.svg#big"></use>
+                                    </svg>
+                                    <span class="_small-text">216 л</span>
+                                </a>
+                            </li>
+                            <li data-size="middle">
+                                <a href="">
+                                    <svg viewBox="0 0 51 65">
+                                        <use xlink:href="img/svg/icons.svg#middle"></use>
+                                    </svg>
+                                    <span class="_small-text">5 л</span>
+                                </a>
+                            </li>
+                            <li data-size="small">
+                                <a href="">
+                                    <svg viewBox="0 0 44 65">
+                                        <use xlink:href="img/svg/icons.svg#small"></use>
+                                    </svg>
+                                    <span class="_small-text">20 л</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="product__data">
+                            <a href="">
+                                <svg viewBox="0 0 72 72">
+                                    <use xlink:href="img/svg/icons.svg#globus"></use>
+                                </svg>
+                                Точки продаж
+
+                            </a>
+                            <a href="">
+                                <svg vviewBox="0 0 25 26">
+                                    <use xlink:href="img/svg/icons.svg#password"></use>
+                                </svg>
+                                Технический паспорт
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__info">
+                    <a href="" class="product__article">Артикул: HR15W40CI420</a>
+                    <h1>HAVENS ROBUSTA HD SAE
+                        15W40 API CI-4/SL, ACEA E7</h1>
+                    <span class="product__price"> 55,000 <label>р.</label></span>
+                    <p>Высокоэффективное масло, используемое в дорожных дизельных двигателях. Обладает стабильной
+                        вязкостью при эксплуатации,
+                        гарантируя эффективную смазку двигателя в тяжелых условиях. Превосходные моющие, диспергирующие
+                        и противоизносные
+                        свойства, поддерживают чистоту двигателя и препятствует образованию сажи, шлама и отложений на
+                        поршнях.</p>
+                    <a href="" class="_button _button-dark">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="product-correspondence">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="correspondence">
+                    <div class="correspondence-title">
+                        <span>Соответствует и превосходит:</span>
+                        <span>+</span>
+                    </div>
+                    <div class="correspondence__flex">
+                        <ol>
+                            <li>API CG-4</li>
+                            <li>Renault Truck RLD-2</li>
+                            <li>Cummins CES 20077</li>
+                            <li>Cummins CES 20078</li>
+                        </ol>
+                        <ol>
+                            <li>API CF-4</li>
+                            <li>MB Approval 228.3</li>
+                            <li>Volvo VDS-3</li>
+                            <li>CAT ECF-1-a</li>
+                        </ol>
+                        <ol>
+                            <li>API CI-4</li>
+                            <li>API CH-4</li>
+                            <li>Mac EO-N</li>
+                            <li>MTU Type 2</li>
+                        </ol>
+                        <ol>
+                            <li>ACEA E7-12 (2012)</li>
+                            <li>APICF API SL</li>
+                            <li>Cummins CES 20076</li>
+                            <li>Deutz DQC III-10</li>
+                        </ol>
+                        <ol>
+                            <li>ACEA A3/B4-12(2012)</li>
+                            <li>MB Approval 229.1</li>
+                            <li>CAT ECF-2</li>
+                            <li>MTU Type 2</li>
+                        </ol>
+                        <ol>
+                            <li>Mac EO-M Plus</li>
+                            <li>MAN M 3275</li>
+                            <li>Global DHD-1</li>
+                            <li>Detroit Diesel DDC 93K215</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

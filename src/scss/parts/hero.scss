@@ -257,3 +257,37 @@
         }
     }
 }
+
+#about-page {
+    @include adaptive-value('padding-bottom', 400, 80, 1);
+    
+    .hero__top {
+        @include adaptive-value('margin-bottom', 100, 80, 1);
+        position: static !important;
+        
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        p {
+            max-width: 650px;
+            width: 100%;
+            color: #fff;
+        }
+    }
+
+    .hero__video {
+        display: flex;
+        align-items: center;
+
+        svg {
+            @include adaptive-value("height", 50, 20, 1);
+            fill: #fff;
+            margin-right: 20px;
+            width: fit-content;
+        }
+        p {
+            color: #fff;
+        }
+    }
+}

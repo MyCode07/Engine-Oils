@@ -11,6 +11,7 @@ function toggleAccordion(item) {
         })
 
         item.setAttribute('data-open', 'open')
+        item.classList.add('_open')
     }
     else {
         item.removeAttribute('data-open')
@@ -27,7 +28,7 @@ export const accorden = () => {
         if (accordeonItems.length && window.innerWidth <= windowWidth)
             accordeonItems.forEach(item => {
                 const openBtn = item.querySelector('[data-accordion-title]')
-                
+
                 openBtn.addEventListener('click', function (e) {
                     toggleAccordion(item);
                 });
