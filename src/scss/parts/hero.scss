@@ -258,13 +258,14 @@
     }
 }
 
-#about-page {
-    @include adaptive-value('padding-bottom', 400, 80, 1);
-    
+._about-page {
+    .hero__body {
+        @include adaptive-value("padding-bottom", 400, 80, 1);
+    }
     .hero__top {
-        @include adaptive-value('margin-bottom', 100, 80, 1);
+        @include adaptive-value("margin-bottom", 100, 80, 1);
         position: static !important;
-        
+
         h1 {
             margin-bottom: 30px;
         }

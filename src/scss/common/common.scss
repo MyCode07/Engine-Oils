@@ -95,7 +95,7 @@ h3 {
 }
 
 h4 {
-    @include adaptive-value("font-size", 42, 24, 1);
+    @include adaptive-value("font-size", 42, 20, 1);
     font-weight: 500;
 }
 
@@ -122,32 +122,75 @@ h4 {
     }
 
     transition: all 0.3s ease 0s;
-}
 
-._button-dark {
-    background-color: #0a1b36;
-    color: #fff;
-    border: unset;
+    &-svg {
+        transition: all 0.3s ease 0s;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #fff;
-            color: #0a1b36;
-            box-shadow: rgb(10, 27, 54) 0px 0px 0px 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+
+        gap: 10px;
+
+        @media (max-width: 992px) {
+            border-radius: 4px;
+        }
+
+        svg {
+            transition: all 0.3s ease 0s;
+
+            width: fit-content;
+            height: 25px;
+            width: 25px;
+        }
+
+        white-space: nowrap;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #0a1b36;
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+
+        @media (max-width: 425px) {
+            width: 100%;
         }
     }
-}
 
-._button-white {
-    background-color: #fff;
-    color: #0a1b36;
-    border: unset;
+    &-dark {
+        background-color: #0a1b36;
+        color: #fff;
+        border: unset;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: #0a1b36;
-            color: #fff;
-            box-shadow: rgba(255, 255, 255) 0px 0px 0px 1px;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #fff;
+                color: #0a1b36;
+                box-shadow: rgb(10, 27, 54) 0px 0px 0px 1px;
+            }
+        }
+    }
+
+    &-white {
+        background-color: #fff;
+        color: #0a1b36;
+        border: unset;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #0a1b36;
+                color: #fff;
+                box-shadow: rgba(255, 255, 255) 0px 0px 0px 1px;
+            }
         }
     }
 }
@@ -188,7 +231,7 @@ h4 {
 }
 
 ._main-text {
-    @include adaptive-value("font-size", 48, 22, 1);
+    @include adaptive-value("font-size", 48, 20, 1);
     line-height: 1.2;
 
     @media (max-width: 768px) {
@@ -202,6 +245,8 @@ h4 {
     line-height: 1;
     opacity: 0.5;
 }
+
+
 
 figure,
 img,

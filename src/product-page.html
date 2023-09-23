@@ -10,13 +10,13 @@
             <div class="section__body">
                 <div class="product__content">
                     <div class="product__images">
-                        <img data-size="big" src="img/products/product-1.png" alt="">
-                        <img data-size="middle" src="img/products/product-1.png" alt="">
-                        <img data-size="small" src="img/products/product-1.png" alt="">
+                        <img class="product-img" data-active data-size="big" src="img/products/product-1.png" alt="">
+                        <img class="product-img" data-size="middle" src="img/products/prod-2.png" alt="">
+                        <img class="product-img" data-size="small" src="img/products/prod-1.png" alt="">
                     </div>
                     <div class="product__absolute">
                         <ul class="product__size">
-                            <li data-size="big">
+                            <li class="size" data-active data-size="big" >
                                 <a href="">
                                     <svg viewBox="0 0 42 65">
                                         <use xlink:href="img/svg/icons.svg#big"></use>
@@ -24,7 +24,7 @@
                                     <span class="_small-text">216 л</span>
                                 </a>
                             </li>
-                            <li data-size="middle">
+                            <li  class="size"  data-left data-size="middle">
                                 <a href="">
                                     <svg viewBox="0 0 51 65">
                                         <use xlink:href="img/svg/icons.svg#middle"></use>
@@ -32,7 +32,7 @@
                                     <span class="_small-text">5 л</span>
                                 </a>
                             </li>
-                            <li data-size="small">
+                            <li  class="size" data-right data-size="small">
                                 <a href="">
                                     <svg viewBox="0 0 44 65">
                                         <use xlink:href="img/svg/icons.svg#small"></use>
@@ -81,7 +81,7 @@
                 <div class="correspondence">
                     <div class="correspondence-title">
                         <span>Соответствует и превосходит:</span>
-                        <span>+</span>
+                        <label>+</label>
                     </div>
                     <div class="correspondence__flex">
                         <ol>

@@ -9,6 +9,8 @@ import "./utils/isMobile.js";
 import "./static/replace.js";
 import "./parts/header.js";
 import "./parts/card-hover.js";
+import "./parts/product-page.js";
+import "./parts/catalog-filters.js";
 
 
 replaceDomElements();

@@ -35,3 +35,12 @@ export const accorden = () => {
             });
     });
 }
+
+
+const correspondence = document.querySelector('.correspondence');
+
+if (correspondence) {
+    correspondence.addEventListener('click', function (e) {
+        correspondence.classList.toggle('_active')
+    });
+}
