@@ -1,10 +1,42 @@
-<div class="popup">
+<div class="popup" id="popup">
     <div class="popup__container _container">
         <div class="popup__body">
             <button class="popup__close" href="#">
-                <img src="@img/svg/close.svg" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M1 1L11 11M21 21L11 11M11 11L1 21M11 11L21 1" stroke="#fff" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </button>
-            <div class="popup__content"></div>
+            <div class="popup__content">
+                <form action="" class="form">
+                    <div class="form__title">
+                        <p>Запрос на коммерческое <br> предложение
+                        </p>
+                        <span><label>*</label> - обязательные для заполнения поля</span>
+                    </div>
+
+                    <div class="form__input">
+                        <input type="text" placeholder="Имя" name="name">
+                    </div>
+                    <div class="form__input">
+                        <input type="text" name="phone" placeholder="Телефон *">
+                    </div>
+                    <div class="form__input">
+                        <input type="email" name="email" placeholder="Email *">
+                    </div>
+
+                    <textarea name="msg" placeholder="Вопрос (или комментарий) *"></textarea>
+
+                    <div class="form-button">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="save" name="save">
+                            <span class="checkbox"></span>
+                            <label>Согласен с политикой конфиденциальности</label>
+                        </label>
+                        <button type="submit" class="_button _button-dark">Отправить</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -11,6 +11,7 @@ import "./parts/header.js";
 import "./parts/card-hover.js";
 import "./parts/product-page.js";
 import "./parts/catalog-filters.js";
+import "./parts/popup.js";
 
 
 replaceDomElements();

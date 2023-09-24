@@ -8,7 +8,7 @@
 
 
 <main>
-    <section class="section top _column">
+    <section class="section top _column" id="contacts">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="_section-top">
@@ -17,20 +17,20 @@
                 <div class="about">
                     <div class="about__flex">
                         <div class="main__blok">
-                            <ol>
+                            <ol class="data">
                                 <li>
-                                    <span>Адрес</span>
+                                    <h3>Адрес</h3>
                                     <label>444444, г. Челябинск,
                                         ул. Труда дом 88, офис 22</label>
                                 </li>
                                 <li>
-                                    <span>Телефон</span>
+                                    <h3>Телефон</h3>
                                     <a href="tel:+88888888888" class="contact" target="_blank">
                                         <label>+ 8 (888) 888-88-88</label>
                                     </a>
                                 </li>
                                 <li>
-                                    <span>E-mail</span>
+                                    <h3>E-mail</h3>
                                     <a href="mailto:motorolis.@mail.ru" class="contact" target="_blank">
                                         <label>motorolis.@mail.ru</label>
                                     </a>
@@ -38,7 +38,7 @@
                             </ol>
                             <div class="socialmedi-blok">
                                 <ol>
-                                    <p>Социальные сети</p>
+                                    <h3>Социальные сети</h3>
                                     <div>
                                         <li>
                                             <a href="" target="_blank">
@@ -64,7 +64,7 @@
                                     </div>
                                 </ol>
                                 <ol>
-                                    <p>Mаркетплейсы</p>
+                                    <h3>Mаркетплейсы</h3>
                                     <div>
                                         <li>
                                             <a href="" target="_blank">
@@ -93,100 +93,34 @@
                         </div>
                         <div class="flex">
                             <div class="flex-item">
-                                <div class="accordion" data-accordion data-width="10000">
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">1</label>
-                                            <h3>Консультации профессионального специалиста</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Оперативные консультации профессионального специалиста: наш
-                                                        эксперт поможет вам подобрать и применить продукцию
-                                                        оптимально для ваших нужд.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <form action="" class="form">
+                                    <div class="form__title">
+                                        <p>Напишите нам и мы ответим в ближайшее время
+                                        </p>
+                                        <span><label>*</label> - обязательные для заполнения поля</span>
                                     </div>
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">2</label>
-                                            <h3>Маркетинговую поддержку бренда</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Вместе с нами вы получаете доступ к регулярной информационной
-                                                        поддержке и рекламе на официальных ресурсах Havens.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                    <div class="form__input">
+                                        <input type="text" placeholder="Имя" name="name">
                                     </div>
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">3</label>
-                                            <h3>Гибкий подход</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Мы ценим каждого партнера и готовы обсудить индивидуальные
-                                                        условия сотрудничества, чтобы достичь взаимовыгодных
-                                                        результатов.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="form__input">
+                                        <input type="text" name="phone" placeholder="Телефон *">
                                     </div>
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">4</label>
-                                            <h3>Презентацию продукции</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Печатные и POS-m материалы: для создания эффективного
-                                                        презентационного материала.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="form__input">
+                                        <input type="email" name="email" placeholder="Email *">
                                     </div>
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">5</label>
-                                            <h3>Печатные и POS-m материалы</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Печатные и POS-m материалы: для создания эффективного
-                                                        презентационного материала.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                    <textarea name="msg" placeholder="Вопрос (или комментарий) *"></textarea>
+
+                                    <div class="form-button">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="save" name="save">
+                                            <span class="checkbox"></span>
+                                            <label>Согласен с политикой конфиденциальности</label>
+                                        </label>
+                                        <button type="submit" class="_button _button-dark">Отправить</button>
                                     </div>
-                                    <div class="accordion__item" data-accordion-item>
-                                        <div class="accordion__item-title" data-accordion-title>
-                                            <label class="_small-text">6</label>
-                                            <h3>Видео тренинг по моторным маслам Havens</h3>
-                                            <label>+</label>
-                                        </div>
-                                        <div class="accordion__item-content" data-accordion-content>
-                                            <div class="accordion__item-content-height">
-                                                <div>
-                                                    <p>Печатные и POS-m материалы: для создания эффективного
-                                                        презентационного материала.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
