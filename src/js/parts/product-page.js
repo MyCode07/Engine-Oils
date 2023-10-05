@@ -14,16 +14,6 @@ sizeElements.forEach((sizeElement) => {
 
         imageElements.forEach((imageElement) => {
             imageElement.removeAttribute('data-active');
-            
-        //     // Проверяем, есть ли у изображения data-size и оно совпадает с выбранным размером
-
-        //     if (sizeElement.hasAttribute('data-left')) {
-        //         imageElement.style.left = '-10%';
-        //         imageElement.style.right = 'unset';
-        //     } else if (sizeElement.hasAttribute('data-right')) {
-        //         imageElement.style.left = 'unset';
-        //         imageElement.style.right = '-10%';
-        //     }
         });
 
         const selectedImage = document.querySelector(`.product-img[data-size="${selectedSize}"]`);

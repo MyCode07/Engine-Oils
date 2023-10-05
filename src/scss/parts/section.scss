@@ -39,6 +39,106 @@
             @include adaptive-value("margin-bottom", 40, 30, 1);
         }
     }
+
+    &.map {
+        .main__blok {
+            background-color: #007bff;
+        }
+
+        .map-flex {
+            display: flex;
+
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+
+        .map-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #0a1b36;
+                mix-blend-mode: overlay;
+            }
+        }
+    }
+
+    .main {
+        // .main__blok
+
+        &__blok {
+            background-color: #0a1b36;
+            color: #0a1b36;
+
+            @media (max-width: 992px) {
+                margin: 0 0 20px 0;
+            }
+
+            // .main__blok-top
+
+            &-top {
+                svg {
+                    @include adaptive-value("margin-bottom", 20, 10, 1);
+                    stroke: #fff;
+                    width: fit-content;
+                    @include adaptive-value("height", 70, 40, 1);
+                    fill: transparent;
+                }
+            }
+
+            ol {
+                & > :not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                li {
+                    display: flex;
+                    width: fit-content;
+                    align-items: center;
+
+                    &:before {
+                        display: block;
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -25%;
+                bottom: -40%;
+                height: 100%;
+                width: 100%;
+                background-image: url("@img/map-icon.png");
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                background-size: contain;
+                mix-blend-mode: normal;
+                z-index: 0;
+
+                @media (max-width: 725px) {
+                    right: -35%;
+                    bottom: -45%;
+                }
+            }
+        }
+    }
 }
 
 .about {
@@ -863,6 +963,7 @@
             opacity: 0.5;
         }
     }
+
     .main__blok {
         max-width: unset;
 
@@ -1160,9 +1261,11 @@
                 width: auto;
                 height: 100%;
                 opacity: 0.6;
-                filter: grayscale(80%) blur(3px);
+                filter: grayscale(70%) blur(5px);
+                pointer-events: none;
 
                 &[data-active] {
+                    pointer-events: all;
                     opacity: 1;
                     top: 50%;
                     left: 50%;
